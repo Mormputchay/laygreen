@@ -40,7 +40,7 @@ class BestSeller extends StatelessWidget {
     return SingleChildScrollView(
       scrollDirection: Axis.vertical,
       child: Padding(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,

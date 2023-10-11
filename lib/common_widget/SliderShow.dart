@@ -27,7 +27,7 @@ class _SliderShowState extends State<SliderShow> {
           return buildImage(urlImage, media, index);
         },
         options: CarouselOptions(
-            height: 170,
+            height: 190,
             initialPage: 0,
             viewportFraction: 1,
             autoPlay: false,
@@ -70,7 +70,7 @@ class _SliderShowState extends State<SliderShow> {
                   width: 250,
                   height: 80,
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 10),
                 const Text(
                   "088 2001 999",
                   style: TextStyle(
@@ -79,8 +79,10 @@ class _SliderShowState extends State<SliderShow> {
                       fontWeight: FontWeight.bold),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 15),
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       builderIndicatior(),
@@ -101,8 +103,8 @@ class _SliderShowState extends State<SliderShow> {
       count: imgList.length,
       onDotClicked: animateToSlide,
       effect: JumpingDotEffect(
-          dotWidth: 10,
-          dotHeight: 10,
+          dotWidth: 15,
+          dotHeight: 15,
           activeDotColor: Colors.green.shade900,
           dotColor: Colors.black45),
     );

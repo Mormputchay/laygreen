@@ -114,92 +114,89 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         fontWeight: FontWeight.bold),
                   ),
                 ),
-                Expanded(
-                  child: SizedBox(
-                    height: media.width * 0.25,
-                    child: ListView.builder(
-                        shrinkWrap: true,
-                        scrollDirection: Axis.horizontal,
-                        itemCount: BestSeller1.length,
-                        itemBuilder: (context, index) {
-                          var pObj = BestSeller1[index] as Map? ?? {};
-                          return Stack(
-                            alignment: Alignment.bottomRight,
-                            children: [
-                              Container(
-                                margin: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 10),
-                                width: 160,
-                                decoration: BoxDecoration(
-                                    color: Colors.white,
-                                    borderRadius: BorderRadius.circular(8),
-                                    boxShadow: [
-                                      BoxShadow(
-                                          color: Colors.grey.withOpacity(0.5),
-                                          spreadRadius: 3,
-                                          blurRadius: 10,
-                                          offset: const Offset(0, 3))
-                                    ]),
-                                child: Column(
-                                  children: [
-                                    Column(
-                                      children: [
-                                        ClipRRect(
-                                          borderRadius:
-                                              BorderRadius.circular(8),
-                                          child: Image.network(
-                                            pObj["image"].toString(),
-                                            height: media.width * 0.30,
-                                            width: double.maxFinite,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.start,
-                                          children: [
-                                            const SizedBox(height: 10),
-                                            Text(
-                                              pObj["name"].toString(),
-                                              textAlign: TextAlign.start,
-                                              overflow: TextOverflow.ellipsis,
-                                              maxLines: 1,
-                                              style: const TextStyle(
-                                                  fontSize: 16,
-                                                  color: Colors.black),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                    Expanded(
-                                      child: Padding(
-                                        padding: const EdgeInsets.symmetric(
-                                            horizontal: 10, vertical: 10),
-                                        child: Align(
-                                          alignment: Alignment.centerRight,
-                                          child: Container(
-                                              width: 35,
-                                              height: 35,
-                                              decoration: BoxDecoration(
-                                                  color: Colors.green.shade900,
-                                                  borderRadius:
-                                                      BorderRadius.circular(8)),
-                                              child: const Icon(
-                                                Icons.favorite,
-                                                size: 20,
-                                                color: Colors.white,
-                                              )),
+                SizedBox(
+                  height: media.width * 0.6,
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: BestSeller1.length,
+                      itemBuilder: (context, index) {
+                        var pObj = BestSeller1[index] as Map? ?? {};
+                        return Stack(
+                          alignment: Alignment.bottomRight,
+                          children: [
+                            Container(
+                              margin: const EdgeInsets.symmetric(
+                                  horizontal: 10, vertical: 10),
+                              width: 160,
+                              decoration: BoxDecoration(
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(8),
+                                  boxShadow: [
+                                    BoxShadow(
+                                        color: Colors.grey.withOpacity(0.5),
+                                        spreadRadius: 3,
+                                        blurRadius: 10,
+                                        offset: const Offset(0, 3))
+                                  ]),
+                              child: Column(
+                                children: [
+                                  Column(
+                                    children: [
+                                      ClipRRect(
+                                        borderRadius: BorderRadius.circular(8),
+                                        child: Image.network(
+                                          pObj["image"].toString(),
+                                          height: media.width * 0.30,
+                                          width: double.maxFinite,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          const SizedBox(height: 10),
+                                          Text(
+                                            pObj["name"].toString(),
+                                            textAlign: TextAlign.start,
+                                            overflow: TextOverflow.ellipsis,
+                                            maxLines: 1,
+                                            style: const TextStyle(
+                                                fontSize: 16,
+                                                color: Colors.black),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                  Expanded(
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 10, vertical: 10),
+                                      child: Align(
+                                        alignment: Alignment.centerRight,
+                                        child: Container(
+                                            width: 35,
+                                            height: 35,
+                                            decoration: BoxDecoration(
+                                                color: Colors.green.shade900,
+                                                borderRadius:
+                                                    BorderRadius.circular(8)),
+                                            child: const Icon(
+                                              Icons.favorite,
+                                              size: 20,
+                                              color: Colors.white,
+                                            )),
+                                      ),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          );
-                        }),
-                  ),
+                            ),
+                          ],
+                        );
+                      }),
                 ),
               ],
             ),
