@@ -70,7 +70,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 Image.network(
                   "https://www.daugres.com.hk/wp-content/uploads/2021/04/m_giallopernice.jpg",
                   width: double.maxFinite,
-                  height: 250,
+                  height: media.width * 0.5,
                   fit: BoxFit.cover,
                 ),
                 const SizedBox(height: 10),
@@ -115,7 +115,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                 ),
                 Expanded(
                   child: SizedBox(
-                    height: 330,
+                    height: media.width * 0.25,
                     child: ListView.builder(
                         shrinkWrap: true,
                         scrollDirection: Axis.horizontal,
@@ -148,7 +148,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                               BorderRadius.circular(8),
                                           child: Image.network(
                                             pObj["image"].toString(),
-                                            height: 150,
+                                            height: media.width * 0.30,
                                             width: double.maxFinite,
                                             fit: BoxFit.cover,
                                           ),
