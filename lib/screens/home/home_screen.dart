@@ -218,12 +218,40 @@ class _HomeScreenState extends State<HomeScreen>
                       if (selectTab == 0)
                         BestSeller()
                       else if (selectTab == 1)
-                        const Center(
-                          child: Text("Hello1"),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: media.width * 0.2),
+                              Image.asset(
+                                "asset/images/no-data.png",
+                                width: 70,
+                                height: 70,
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
                         )
                       else
-                        const Center(
-                          child: Text("Hello2"),
+                        Container(
+                          alignment: Alignment.center,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              SizedBox(height: media.width * 0.2),
+                              Image.asset(
+                                "asset/images/no-data.png",
+                                width: 70,
+                                height: 70,
+                                fit: BoxFit.cover,
+                              ),
+                            ],
+                          ),
                         )
                     ],
                   ),
