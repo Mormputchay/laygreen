@@ -6,6 +6,7 @@ class DetailsScreen extends StatefulWidget {
   State<DetailsScreen> createState() => _DetailsScreenState();
 }
 
+//DetailsScreen
 class _DetailsScreenState extends State<DetailsScreen> {
   List BestSeller1 = [
     {
